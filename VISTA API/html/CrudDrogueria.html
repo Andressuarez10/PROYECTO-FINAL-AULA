@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <title>DROGUERIA</title>
+</head>
+
+<body>
+    <div class="text-center bg-info text-white">
+        <h1>DROGUERIA</h1>
+    </div>
+
+    <div class="container">
+        <br/>
+        <!--- inicio del menu-->
+        <nav class="nav navbar-dark nav-pills flex-column flex-sm-row">
+            <a class="bg-secondary flex-sm-fill text-sm-center me-5 nav-link active border border-success"
+                aria-current="page" href="../index.html">
+                <h6>INICIO</h6>
+            </a>
+            <a class="bg-secondary flex-sm-fill text-sm-center me-5 nav-link active border border-success"
+                href="../html/CrudDrogueria.html">
+                <h6>CRUD DROGUERIA</h6>
+            </a>
+            <a class="bg-secondary flex-sm-fill text-sm-center me-5 nav-link active border border-success"
+                href="../html/ConsultaDrogueria.html">
+                <h6>CONSULTA DROGUERIA</h6>
+            </a>
+            
+
+            <a class="bg-secondary flex-sm-fill text-sm-center me-5 nav-link active  border border-success"
+                href="../html/iniciosecion.html">
+                <h6>INICIÓ DE SESIÓN</h6>
+            </a>
+        </nav>
+
+        <br>
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Consulta Todas las ventas</h3>
+                <!--Consultar todos los registros. llama el metodo getall()-->
+                <button class="btn btn-primary" id="mostrar">Consultas registros</button>
+                <br>
+                <br>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">NOMBRES</th>
+                            <th scope="col">DNI</th>
+                            <th scope="col">SERIE</th>
+                            <th scope="col">NUMERO</th>
+                            <th scope="col">VENTA TOTAL</th>
+                            <th scope="col">SUB TOTAL</th>
+                            <th scope="col">TOTAL</th>
+                            <th scope="col">FECHA</th>
+                        </tr>
+                    </thead>
+                    <tbody ID="table">
+                    </tbody>
+                </table>
+                <div id="res">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <hr>
+
+        
+
+
+            <div class="row">
+            <div class="col-lg-12">
+                <h3>Consultar por id una venta</h3>
+                <!--Consultar por Id. llama el metodo getallbyid()-->
+                <input type="text" id="IdVenta" class="form-control border-info" placeholder=" Id "><br>
+                <button class="btn btn-primary" id="mostrarid">Buscar por id</button>
+                <br>
+                <br>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">NOMBRES</th>
+                            <th scope="col">DNI</th>
+                            <th scope="col">SERIE</th>
+                            <th scope="col">NUMERO</th>
+                            <th scope="col">VENTA TOTAL</th>
+                            <th scope="col">SUB TOTAL</th>
+                            <th scope="col">TOTAL</th>
+                            <th scope="col">FECHA</th>
+                        </tr>
+                    </thead>
+                    <tbody ID="tableid">
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+        <hr>
+        <hr>
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+           <div class="row">
+            <div class="col-lg-6">
+                <h3>Insertar una venta</h3>
+                <!--operacion pa-->
+                <input type="text" id="Serie" class="form-control border-info" placeholder=" Serie "><br>
+                <input type="text" id="Numero" class="form-control border-info" placeholder=" Numero "><br>
+                <input type="text" id="VentaTotal" class="form-control border-info" placeholder=" Venta total "><br>
+                <input type="text" id="SubTotal" class="form-control border-info" placeholder=" Sub total "><br>
+                <input type="text" id="Total" class="form-control border-info" placeholder=" Total "><br>
+                <input type="text" id="idCliente" class="form-control border-info" placeholder=" Id cliente "><br>
+                <input type="text" id="idEmpleado" class="form-control border-info" placeholder=" Id empleado"><br>
+                <input type="text" id="Fecha" class="form-control border-info" placeholder=" Fecha "><br>
+                <button class="btn  btn-outline-warning border-warning" onclick="addventas()">Insertar en ventas </button>
+    
+            </div>
+            <div class="col-lg-6">
+                <h3>Actualizar una venta</h3>
+                <!--operacion pa-->
+                <input type="text" id="Idventa" class="form-control border-info" placeholder=" Id"><br>
+                <input type="text" id="Serie" class="form-control border-info" placeholder=" Serie "><br>
+                <input type="text" id="Numero" class="form-control border-info" placeholder=" Numero "><br>
+                <input type="text" id="VentaTotal" class="form-control border-info" placeholder=" Venta total "><br>
+                <input type="text" id="SubTotal" class="form-control border-info" placeholder=" Sub total "><br>
+                <input type="text" id="Total" class="form-control border-info" placeholder=" Total "><br>
+                <input type="text" id="idCliente" class="form-control border-info" placeholder=" Id cliente "><br>
+                <input type="text" id="idEmpleado" class="form-control border-info" placeholder=" Id empleado"><br>
+                <input type="text" id="Fecha" class="form-control border-info" placeholder=" Fecha "><br>
+                <button class="btn  btn-outline-warning border-warning" onclick="actualizarventa()">Actualizar en ventas </button>
+            </div>
+    
+           </div>
+        
+        
+        <hr>
+    
+           <div class="row">
+            <div class="col-lg-6">
+                <h3>Eliminar por id </h3>
+                <!--operacion para consultar todos. llama el metodo getallbyid()-->
+                <input type="text" id="IdVenta" class="form-control border-info" placeholder="Id "> <br>
+                <button class="btn btn-outline-danger border-danger" onclick=" deleteventas()">Eliminar en ventas</button>
+            </div>
+            <div class="col-lg-6">
+                
+            </div>
+    
+           </div>
+
+
+      
+
+
+
+        </div>
+    </br>
+    <hr>
+    </hr>
+    <!--- pie de pagina-->
+    <div class="text-center bg-info text-white">
+        Drogueria@gmail.com <br />
+        Calle 14 #17 – 47 Barranquilla – Atlantico, Colombia <br />
+        (57) (5) 847612 <br />
+        Copyright © 2017 by FQ Tecnologia.
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/proceso.js"></script>
+    <script src="../js/proceso2.js"></script>
+    
+</body>
+
+</html>

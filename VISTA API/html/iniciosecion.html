@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css" href="../css/abscenter.css" />
+    <script src="../js/proceso.js"></script>
+    <title>DROGUERIA</title>
+</head>
+
+<body>
+    <div class="text-center bg-info text-white">
+        <h1>DROGUERIA</h1>
+    </div>
+
+    <div class="container">
+        <br />
+        <!--- inicio del menu-->
+        <nav class="nav navbar-dark nav-pills flex-column flex-sm-row">
+            <a class="bg-secondary flex-sm-fill text-sm-center me-5 nav-link active border border-Danger"
+                aria-current="page" href="../index.html">
+                <h6>INICIO</h6>
+            </a>
+            <a class="bg-secondary flex-sm-fill text-sm-center me-5 nav-link active border border-success"
+                href="../html/CrudDrogueria.html">
+                <h6>CRUD DROGUERIA</h6>
+            </a>
+            <a class="bg-secondary flex-sm-fill text-sm-center me-5 nav-link active border border-success"
+                href="../html/ConsultaDrogueria.html">
+                <h6>CONSULTA DROGUERIA</h6>
+            </a>
+        
+            <a class="bg-secondary flex-sm-fill text-sm-center me-5 nav-link active  border border-success"
+                href="../html/iniciosecion.html">
+                <h6>INICIÓ DE SESIÓN</h6>
+            </a>
+        </nav>
+
+        <!---fin del menu-->
+
+        <br>
+        </br>
+
+    <div class="row">
+        <div class="col-lg-6 ">
+            <div class="abs-center">
+                <form action="../index.html" class="border border-primary border-primary p-3 form">
+                    <div class="form-group">
+                        <h1 class="text-center text-primary">Inicia sesion aqui!</h1>
+                        <br>
+                        <label for="email">Usuario</label>
+                        <input type="text" name="email" id="email" class="form-control border-primary">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control border-primary">
+                    </div>
+                    <br>
+                    <br>
+
+                    <button type="submit" id="boton1" class="btn-center btn btn-outline-success me-5 border-success" onclick="login()">Login</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-6 ">
+            <img src="../img/13.png" class="img-fluid" />
+        </div>
+    </div>
+        <br />
+        <!--- grilla de 12 para mostrar imagen-->
+        <div style="text-align: center;" class="row">
+            <div class="col-lg-12">
+            
+            </div>
+        </div>
+    </div>
+    <br>
+    </br>
+    <hr>
+
+    <!--- pie de pagina-->
+    <div class="text-center bg-info text-white">
+        Drogueria@gmail.com <br />
+        Calle 14 #17 – 47 Barranquilla – Atlantico, Colombia <br />
+        (57) (5) 847612 <br />
+        Copyright © 2017 by FQ Tecnologia.
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/proceso.js"></script>
+</body>
+
+</html>
